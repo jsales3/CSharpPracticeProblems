@@ -41,19 +41,27 @@ namespace PracticeQuestions
 
             //n = int.Parse(Console.ReadLine());
 
-            //for(int i = 1; i <= n; i++)
+            //for (int i = n; i >= 1; i--)
             //{
-            //    for(int j )
-            //    Console.Write(" ");
-            //    if (i == n)
+            //    for (int j = 1; j <= n; j++)
             //    {
-            //        Console.Write("#");
-            //        Console.WriteLine();
+            //        if (j < i)
+            //        {
+            //            Console.Write(" ");
+
+            //        }
+            //        else if(j >= i)
+            //        {
+            //            Console.Write("#");
+            //        }
+
+
             //    }
-
-
+            //    Console.WriteLine();
 
             //}
+            //Console.ReadLine();
+
 
             //string[] ar = new string[3];
             //int[] A = new int[3];
@@ -191,23 +199,171 @@ namespace PracticeQuestions
             //    if(i % 2 != 0)
             //    {
             //        num.Add(i);
-                    
+
 
             //    }
-                
+
 
             //}
             //arr = num.ToArray();
 
-            
+
             //for (int i=0; i < arr.Length; i++)
             //{
             //    Console.WriteLine(arr[i] + " ");
             //}
 
-            
+
+            //double result = 0.0;
+            //double negative = 0.0;
+            //double positve = 0.0;
+            //double zero = 0.0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (arr[i] > 0)
+            //    {
+            //        positve += 1;
+            //    }
+            //    else if (arr[i] < 0)
+            //    {
+            //        negative += 1;
+            //    }
+            //    else if (arr[i] == 0)
+            //        zero += 1;
+            //}
+            //result = positve / arr.Length;
+            //Console.WriteLine(result);
+
+            //result = negative / arr.Length;
+            //Console.WriteLine(result);
+
+            //result = zero / arr.Length;
+            //Console.WriteLine(result);
 
 
+            //string dna = "AAAATTGCGCATGC";
+
+            //Console.WriteLine("The DNA string is: " + dna);
+
+            //char[] dnaLetters = dna.ToCharArray(); //translated dna strand to a character array
+            ////got the length of the array to use in for loop
+
+            //List<char> dnaComplementLetters = new List<char>();
+
+            //for (int i = 0; i < dnaLetters.Length; i++)
+            //{
+            //    char dnaLetter = dnaLetters[i];
+            //    char dnaComplementLetter;
+
+            //    //convert dnaLetter to a string to use in switch statement
+            //    switch (dnaLetters[i])
+            //    {
+            //        case 'A':
+            //            dnaComplementLetter = 'T';
+            //            dnaComplementLetters.Add(dnaComplementLetter);
+            //            break;
+            //        case 'T':
+            //            dnaComplementLetter = 'A';
+            //            dnaComplementLetters.Add(dnaComplementLetter);
+            //            break;
+            //        case 'G':
+            //            dnaComplementLetter = 'C';
+            //            dnaComplementLetters.Add(dnaComplementLetter);
+            //            break;
+            //        case 'C':
+            //            dnaComplementLetter = 'G';
+            //            dnaComplementLetters.Add(dnaComplementLetter);
+            //            break;
+            //        default:
+            //            Console.WriteLine("Invalid letter in dna string");
+            //            break;
+            //    }
+            //}
+
+            //dnaComplementLetters.Reverse();
+
+            ////convert list<> into string
+            //string complementDna = string.Join("", dnaComplementLetters);
+
+            //Console.WriteLine("The new complement DNA string: " + complementDna);
+            ////stop console from exiting after running
+            //Console.ReadLine();
+
+            //for (int i = 1; i <= 100; i++)
+            //{
+            //    int counter1 = 0;
+            //    int counter2 = 0;
+            //    for (int j = 2; j < i - 1; j++)
+            //    {
+            //        int remainder = i % j;
+            //        if (remainder == 0)
+            //        {
+            //            counter1++;
+            //        }
+            //        else
+            //        {
+            //            counter2++;
+            //        }
+            //    }
+            //    if (counter1 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+            ////stop console from exiting after running
+            //Console.ReadLine();
+
+            //int n = int.Parse(Console.ReadLine());
+            //int prime = 0;
+
+            //if(n == 2)
+            //{
+            //    prime = 1;
+            //}
+            //else if(n % 2 != 0 )
+            //{
+            //    prime = 1;
+            //}
+            //else
+            //{
+            //    prime = 2;
+            //}
+            //Console.WriteLine(prime);
+            //Console.ReadLine();
+
+            int[] arr = new int [5];
+            long sum = 0;
+            long lowSum = 0;
+            long highSum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = i+1;
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (j != i)
+                    {
+                        sum = sum + arr[j];
+                    }
+                }
+
+                lowSum = sum;
+
+                if (lowSum > highSum)
+                {
+                    highSum = lowSum;
+                }
+                sum = 0;
+
+            }
+
+            Console.WriteLine(lowSum + " " + highSum);
+            Console.ReadLine();
 
         }
 
